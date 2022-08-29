@@ -167,8 +167,8 @@ setup.kibana:
 # The cloud.auth setting overwrites the `output.elasticsearch.username` and
 # `output.elasticsearch.password` settings. The format is `<user>:<pass>`.
 #cloud.auth:
-cloud.id: ""
-cloud.auth: ""
+# cloud.id: ""
+# cloud.auth: ""
 
 # ================================== Outputs ===================================
 
@@ -177,7 +177,7 @@ cloud.auth: ""
 # ---------------------------- Elasticsearch Output ----------------------------
 output.elasticsearch:
   # Array of hosts to connect to.
-  # hosts: ["elasticsearch:9200"]
+  hosts: ["elasticsearch:9200"]
 
   # Protocol - either `http` (default) or `https`.
   #protocol: "https"

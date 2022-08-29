@@ -1,13 +1,13 @@
-package com.fgsantana.msexample
+package com.fgsantana.msktexample
 
 import co.elastic.apm.attach.ElasticApmAttacher
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class MsExampleApplication
+class MsKtExampleApplication
 
 fun main(args: Array<String>) {
 	ElasticApmAttacher.attach()
-	runApplication<MsExampleApplication>(*args)
+	runApplication<MsKtExampleApplication>(*args)
 }

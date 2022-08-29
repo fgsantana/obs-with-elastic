@@ -68,21 +68,29 @@ services:
       - observability
 
   nginx:
-    build: .
+    build: ./nginx
     container_name: nginx
     ports:
       - "8081:80"
     networks:
       - observability
 
-  ms:
-    image: felipes102/ms-example-elastic
-    container_name: ms
+  ms-kt:
+    image: felipes102/ms-kt-example-elastic
+    container_name: ms-kt
     ports:
-      - 8080:8080
+      - 8085:8085
     networks:
       - observability
 
+  ms-go:
+    image: felipes102/ms-go-example-elastic
+    container_name: ms-go
+    ports:
+      - 8880:8880
+    networks:
+      - observability
+      
 networks:
   observability:
     external: true
